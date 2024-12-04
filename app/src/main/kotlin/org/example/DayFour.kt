@@ -1,10 +1,10 @@
 package org.example
 
 class DayFour: Day {
+
+    override val title: String = "Day 4: Ceres Search"
+
     override operator fun invoke() {
-        println("┌─────────────────────┐")
-        println("│ Day 4: Ceres Search │")
-        println("└─────────────────────┘")
 
         val grid = mutableListOf<List<Char>>()
         val inputStream = this::class.java.classLoader.getResource("DayFour.txt")?.openStream()

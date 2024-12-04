@@ -6,10 +6,9 @@ class DayThree: Day {
         val PATTERN = Regex("mul\\((\\d{1,3}),(\\d{1,3})\\)|(do\\(\\))|(don't\\(\\))")
     }
 
+    override val title: String = "Day 3: Mull It Over"
+
     override operator fun invoke() {
-        println("┌─────────────────────┐")
-        println("│ Day 3: Mull It Over │")
-        println("└─────────────────────┘")
 
         var sum = 0
         var enabled = true

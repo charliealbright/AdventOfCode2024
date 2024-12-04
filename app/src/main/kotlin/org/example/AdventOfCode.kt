@@ -18,7 +18,10 @@ class AdventOfCode {
                 "┛┗┗┻┗┛┗ ┛┗┗  ┗┛┛  ┗┛┗┛┗┻┗")
         print("\u001b[0m")
 
-        solutions.forEach { it() }
+        solutions.forEach {
+            it.printTitle()
+            it()
+        }
     }
 }
 

@@ -3,11 +3,10 @@ package org.example
 import kotlin.math.abs
 
 class DayOne: Day {
-    override operator fun invoke() {
-        println("┌───────────────────────────┐")
-        println("│ Day 1: Historian Hysteria │")
-        println("└───────────────────────────┘")
 
+    override val title = "Day 1: Historian Hysteria"
+
+    override operator fun invoke() {
         print("Part 1 -- ")
         val a: MutableList<Int> = mutableListOf()
         val b: MutableList<Int> = mutableListOf()

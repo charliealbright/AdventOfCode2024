@@ -4,10 +4,9 @@ import kotlin.math.abs
 
 class DayTwo: Day {
 
+    override val title = "Day 2: Red-nosed Reports"
+
     override operator fun invoke() {
-        println("┌──────────────────────────┐")
-        println("│ Day 2: Red-nosed Reports │")
-        println("└──────────────────────────┘")
 
         var goodReportCount = 0
         var goodReportCountWithDampener = 0
