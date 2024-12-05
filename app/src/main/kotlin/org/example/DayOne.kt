@@ -43,6 +43,5 @@ class DayOne: Day {
         }
 
         println("Similarity score: $score")
-        println()
     }
 }

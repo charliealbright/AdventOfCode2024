@@ -33,7 +33,6 @@ class DayTwo: Day {
 
         println("Part 1 -- $goodReportCount safe reports.")
         println("Part 2 -- $goodReportCountWithDampener safe reports using Problem Dampener.")
-        println()
     }
 
     private fun levelsInRange(levels: List<Int>): Boolean {

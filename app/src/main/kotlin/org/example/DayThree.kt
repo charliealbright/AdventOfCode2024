@@ -32,6 +32,5 @@ class DayThree: Day {
 
         println("Part 1 -- The sum of all multiplications is $sum.")
         println("Part 2 -- The sum of only the enabled multiplications is $sumForEnabledMuls.")
-        println()
     }
 }

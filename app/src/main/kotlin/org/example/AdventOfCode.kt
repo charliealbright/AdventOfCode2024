@@ -9,6 +9,7 @@ class AdventOfCode {
         DayTwo(),
         DayThree(),
         DayFour(),
+        DayFive(),
     )
 
     init {
@@ -17,10 +18,12 @@ class AdventOfCode {
                 "┣┫┏┫┓┏┏┓┏┓╋  ┏┓╋  ┃ ┏┓┏┫┏┓\n" +
                 "┛┗┗┻┗┛┗ ┛┗┗  ┗┛┛  ┗┛┗┛┗┻┗")
         print("\u001b[0m")
+        println()
 
         solutions.forEach {
             it.printTitle()
             it()
+            println()
         }
     }
 }
