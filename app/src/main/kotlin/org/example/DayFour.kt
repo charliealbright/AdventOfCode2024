@@ -7,11 +7,8 @@ class DayFour: Day {
     override operator fun invoke() {
 
         val grid = mutableListOf<List<Char>>()
-        val inputStream = this::class.java.classLoader.getResource("DayFour.txt")?.openStream()
-        inputStream?.let {
-            it.bufferedReader().forEachLine { line ->
-                grid.add(line.toList())
-            }
+        Utils.readFile("DayFour.txt")?.forEachLine { line ->
+            grid.add(line.toList())
         }
 
         var matches = 0

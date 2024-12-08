@@ -10,15 +10,12 @@ class DayFive: Day {
         var total = 0
         var sortedTotal = 0
 
-        val inputStream = this::class.java.classLoader.getResource("DayFive.txt")?.openStream()
-        inputStream?.let {
-            it.bufferedReader().forEachLine { line ->
-                if (line.contains('|')) {
-                    val nums = line.split('|').map { num -> num.toInt() }
-                    orderingRules.add(Pair(nums[0], nums[1]))
-                } else if (line.contains(',')) {
-                    pageLists.add(line.split(',').map { num -> num.toInt() })
-                }
+        Utils.readFile("DayFive.txt")?.forEachLine { line ->
+            if (line.contains('|')) {
+                val nums = line.split('|').map { num -> num.toInt() }
+                orderingRules.add(Pair(nums[0], nums[1]))
+            } else if (line.contains(',')) {
+                pageLists.add(line.split(',').map { num -> num.toInt() })
             }
         }
 

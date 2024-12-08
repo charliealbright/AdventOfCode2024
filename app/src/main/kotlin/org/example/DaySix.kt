@@ -11,17 +11,14 @@ class DaySix : Day {
         val loopCausingPoints = mutableListOf<Point>()
         val guard = Guard()
 
-        val inputStream = this::class.java.classLoader.getResource("DaySix.txt")?.openStream()
-        inputStream?.let {
-            it.bufferedReader().forEachLine { line ->
-                val gridline = line.toMutableList()
-                grid.add(gridline)
-                gridPart2.add(gridline)
-                val idx = gridline.indexOf('^')
-                if (gridline.indexOf('^') >= 0) {
-                    guard.currPoint = Point(idx, grid.lastIndex)
-                    visitedPoints.add(guard.currPoint)
-                }
+        Utils.readFile("DaySix.txt")?.forEachLine { line ->
+            val gridline = line.toMutableList()
+            grid.add(gridline)
+            gridPart2.add(gridline)
+            val idx = gridline.indexOf('^')
+            if (gridline.indexOf('^') >= 0) {
+                guard.currPoint = Point(idx, grid.lastIndex)
+                visitedPoints.add(guard.currPoint)
             }
         }
 

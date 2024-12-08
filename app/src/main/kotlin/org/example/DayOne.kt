@@ -11,13 +11,10 @@ class DayOne: Day {
         val a: MutableList<Int> = mutableListOf()
         val b: MutableList<Int> = mutableListOf()
 
-        val inputStream = this::class.java.classLoader.getResource("DayOne.txt")?.openStream()
-        inputStream?.let {
-            it.bufferedReader().forEachLine { line ->
-                val items = line.split("   ")
-                a.add(items[0].toInt())
-                b.add(items[1].toInt())
-            }
+        Utils.readFile("DayOne.txt")?.forEachLine { line ->
+            val items = line.split("   ")
+            a.add(items[0].toInt())
+            b.add(items[1].toInt())
         }
 
         a.sort()

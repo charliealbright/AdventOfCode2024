@@ -10,22 +10,19 @@ class DayTwo: Day {
 
         var goodReportCount = 0
         var goodReportCountWithDampener = 0
-        val inputStream = this::class.java.classLoader.getResource("DayTwo.txt")?.openStream()
-        inputStream?.let {
-            it.bufferedReader().forEachLine { line ->
-                val report = line.split(' ').map { level -> level.toInt() }
+        Utils.readFile("DayTwo.txt")?.forEachLine { line ->
+            val report = line.split(' ').map { level -> level.toInt() }
 
-                if (reportCheck(report)) {
-                    goodReportCount++
-                    goodReportCountWithDampener++
-                } else {
-                    for (i in 0..report.lastIndex) {
-                        val damperedReport = report.filterIndexed { index, _ -> index != i }
-                        if (reportCheck(damperedReport)) {
-                            goodReportCountWithDampener++
+            if (reportCheck(report)) {
+                goodReportCount++
+                goodReportCountWithDampener++
+            } else {
+                for (i in 0..report.lastIndex) {
+                    val damperedReport = report.filterIndexed { index, _ -> index != i }
+                    if (reportCheck(damperedReport)) {
+                        goodReportCountWithDampener++
 
-                            break
-                        }
+                        break
                     }
                 }
             }
