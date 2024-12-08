@@ -24,7 +24,7 @@ class DaySix : Day {
 
         while (true) {
             val pointToCheck = guard.getCheckPoint()
-            if (!isInBounds(pointToCheck, grid[0].size, grid.size)) {
+            if (!pointToCheck.isInBounds(grid[0].size, grid.size)) {
                 break
             }
 
@@ -60,7 +60,7 @@ class DaySix : Day {
         var isLoop = true
         while (step < threshold) {
             val pointToCheck = guard.getCheckPoint()
-            if (!isInBounds(pointToCheck, grid[0].size, grid.size)) {
+            if (!pointToCheck.isInBounds(grid[0].size, grid.size)) {
                 isLoop = false
                 break
             }
@@ -76,12 +76,6 @@ class DaySix : Day {
         }
         return isLoop
     }
-
-    private fun isInBounds(point: Point, width: Int, height: Int): Boolean {
-        return point.x in 0..< width && point.y in 0 ..< height
-    }
-
-    data class Point(val x: Int, val y: Int)
 
     internal class Guard(private var currDirection: Direction = Direction.UP) {
 
