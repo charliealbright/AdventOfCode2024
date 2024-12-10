@@ -12,7 +12,11 @@ object Utils {
         return list.sortedDescending() == list
     }
 
-    fun readFile(fileName: String): BufferedReader? {
+    fun getFileReader(fileName: String): BufferedReader? {
         return this::class.java.classLoader.getResource(fileName)?.openStream()?.bufferedReader()
+    }
+
+    fun readFile(fileName: String): String? {
+        return this::class.java.classLoader.getResource(fileName)?.readText()
     }
 }

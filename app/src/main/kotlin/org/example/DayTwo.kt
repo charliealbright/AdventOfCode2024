@@ -10,7 +10,7 @@ class DayTwo: Day {
 
         var goodReportCount = 0
         var goodReportCountWithDampener = 0
-        Utils.readFile("DayTwo.txt")?.forEachLine { line ->
+        Utils.getFileReader("DayTwo.txt")?.forEachLine { line ->
             val report = line.split(' ').map { level -> level.toInt() }
 
             if (reportCheck(report)) {

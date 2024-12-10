@@ -11,7 +11,7 @@ class DaySix : Day {
         val loopCausingPoints = mutableListOf<Point>()
         val guard = Guard()
 
-        Utils.readFile("DaySix.txt")?.forEachLine { line ->
+        Utils.getFileReader("DaySix.txt")?.forEachLine { line ->
             val gridline = line.toMutableList()
             grid.add(gridline)
             gridPart2.add(gridline)

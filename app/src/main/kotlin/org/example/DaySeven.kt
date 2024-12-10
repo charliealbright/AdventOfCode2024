@@ -9,7 +9,7 @@ class DaySeven : Day {
         var total = 0L
         var totalInclConcat = 0L
 
-        Utils.readFile("DaySeven.txt")?.forEachLine { line ->
+        Utils.getFileReader("DaySeven.txt")?.forEachLine { line ->
             val items = line.split(Pattern.compile(":? ")).toMutableList()
             val sum = items.removeFirst().toLong()
             val inputs = items.map { num -> num.toLong() }

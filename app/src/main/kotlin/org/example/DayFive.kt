@@ -10,7 +10,7 @@ class DayFive: Day {
         var total = 0
         var sortedTotal = 0
 
-        Utils.readFile("DayFive.txt")?.forEachLine { line ->
+        Utils.getFileReader("DayFive.txt")?.forEachLine { line ->
             if (line.contains('|')) {
                 val nums = line.split('|').map { num -> num.toInt() }
                 orderingRules.add(Pair(nums[0], nums[1]))

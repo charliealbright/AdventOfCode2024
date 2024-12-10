@@ -11,7 +11,7 @@ class DayOne: Day {
         val a: MutableList<Int> = mutableListOf()
         val b: MutableList<Int> = mutableListOf()
 
-        Utils.readFile("DayOne.txt")?.forEachLine { line ->
+        Utils.getFileReader("DayOne.txt")?.forEachLine { line ->
             val items = line.split("   ")
             a.add(items[0].toInt())
             b.add(items[1].toInt())

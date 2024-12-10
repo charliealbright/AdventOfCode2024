@@ -12,7 +12,7 @@ class DayEight : Day {
         var w = 0
         var h = 0
 
-        Utils.readFile("DayEight.txt")?.forEachLine { line ->
+        Utils.getFileReader("DayEight.txt")?.forEachLine { line ->
             if (y == 0) w = line.length
             line.forEachIndexed { x, c ->
                 if (c.isLetterOrDigit()) {

@@ -7,7 +7,7 @@ class DayFour: Day {
     override operator fun invoke() {
 
         val grid = mutableListOf<List<Char>>()
-        Utils.readFile("DayFour.txt")?.forEachLine { line ->
+        Utils.getFileReader("DayFour.txt")?.forEachLine { line ->
             grid.add(line.toList())
         }
 
