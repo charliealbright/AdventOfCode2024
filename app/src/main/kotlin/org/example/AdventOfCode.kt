@@ -13,6 +13,7 @@ class AdventOfCode {
         DaySix(),
         DaySeven(),
         DayEight(),
+        DayNine(),
     )
 
     init {
