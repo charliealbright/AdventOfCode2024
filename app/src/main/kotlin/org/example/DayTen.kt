@@ -37,25 +37,13 @@ class DayTen : Day {
         println("Part 2 -- Total trail rating is $rating")
     }
 
-    private fun searchForTrail(point: Point, lookingFor: Int, fromDirection: Direction? = null): List<Point> {
-        return if (lookingFor == 9) {
-            Direction.entries.filter {
-                it != fromDirection
-            }.map {
-                point.add(Point(it.x, it.y))
-            }.filter {
-                it.isInBounds(w, h) && grid[it.y][it.x] == 9
-            }
-        } else {
-            Direction.entries.asSequence().filter {
-                it != fromDirection
-            }.map {
-                point.add(Point(it.x, it.y))
-            }.filter {
-                it.isInBounds(w, h) && grid[it.y][it.x] == lookingFor
-            }.map {
-                searchForTrail(it, lookingFor + 1)
-            }.flatten().toList()
-        }
+    private fun searchForTrail(point: Point, lookingFor: Int): List<Point> {
+        return Direction.entries.map {
+            point.add(Point(it.x, it.y))
+        }.filter {
+            it.isInBounds(w, h) && grid[it.y][it.x] == lookingFor
+        }.map {
+            if (lookingFor == 9) listOf(it) else searchForTrail(it, lookingFor + 1)
+        }.flatten()
     }
 }
