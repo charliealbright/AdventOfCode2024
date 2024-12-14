@@ -2,7 +2,7 @@ package org.example
 
 import org.example.Utils.neighbor
 
-class DayTwelve : Day {
+class Day12 : Day {
     override val title = "Day 12: Garden Groups"
 
     private var grid = mutableListOf<List<Char>>()
@@ -13,7 +13,7 @@ class DayTwelve : Day {
     private var h = 0
 
     override fun invoke() {
-        Utils.getFileReader("DayTwelve.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day12.txt")?.forEachLine { line ->
             grid.add(line.toCharArray().toList())
         }
 

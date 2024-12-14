@@ -1,6 +1,6 @@
 package org.example
 
-class DayNine : Day {
+class Day09 : Day {
 
     override val title: String = "Day 9: Disk Fragmenter"
 
@@ -8,7 +8,7 @@ class DayNine : Day {
         val diskContents = mutableListOf<Int>()
         var isWriting = true
         var blockId = 0
-        Utils.readFile("DayNine.txt")?.forEach {
+        Utils.readFile("Day09.txt")?.forEach {
             val spaces = it.digitToInt()
             if (isWriting) {
                 diskContents.addAll(List(spaces) { blockId })

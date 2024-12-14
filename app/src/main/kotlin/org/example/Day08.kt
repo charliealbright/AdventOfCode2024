@@ -1,6 +1,6 @@
 package org.example
 
-class DayEight : Day {
+class Day08 : Day {
 
     override val title = "Day 8: Resonant Collinearity"
 
@@ -12,7 +12,7 @@ class DayEight : Day {
         var w = 0
         var h = 0
 
-        Utils.getFileReader("DayEight.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day08.txt")?.forEachLine { line ->
             if (y == 0) w = line.length
             line.forEachIndexed { x, c ->
                 if (c.isLetterOrDigit()) {

@@ -5,18 +5,18 @@ package org.example
 
 class AdventOfCode {
     private val solutions = listOf(
-        DayOne(),
-        DayTwo(),
-        DayThree(),
-        DayFour(),
-        DayFive(),
-        DaySix(),
-        DaySeven(),
-        DayEight(),
-        DayNine(),
-        DayTen(),
-        DayEleven(),
-        DayTwelve(),
+        Day01(),
+        Day02(),
+        Day03(),
+        Day04(),
+        Day05(),
+        Day06(),
+        Day07(),
+        Day08(),
+        Day09(),
+        Day10(),
+        Day11(),
+        Day12(),
     )
 
     init {

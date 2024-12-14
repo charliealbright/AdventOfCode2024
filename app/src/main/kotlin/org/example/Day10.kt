@@ -1,6 +1,6 @@
 package org.example
 
-class DayTen : Day {
+class Day10 : Day {
     override val title = "Day 10: Hoof It"
 
     private var w = 0
@@ -13,7 +13,7 @@ class DayTen : Day {
 
         var y = 0
 
-        Utils.getFileReader("DayTen.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day10.txt")?.forEachLine { line ->
             val points = line.toCharArray().map { it.digitToInt() }
             grid.add(points)
             points.forEachIndexed { x, i ->

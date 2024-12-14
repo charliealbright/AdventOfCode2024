@@ -1,6 +1,6 @@
 package org.example
 
-class DayThree: Day {
+class Day03: Day {
 
     companion object {
         val PATTERN = Regex("mul\\((\\d{1,3}),(\\d{1,3})\\)|(do\\(\\))|(don't\\(\\))")
@@ -14,8 +14,7 @@ class DayThree: Day {
         var enabled = true
         var sumForEnabledMuls = 0
 
-        val memory = this::class.java.classLoader.getResource("DayThree.txt")?.readText()
-        memory?.let {
+        Utils.readFile("Day03.txt")?.let {
             PATTERN.findAll(it).forEach { match ->
                 val command = match.groupValues[0]
                 if (command.startsWith("mul")) {

@@ -1,13 +1,13 @@
 package org.example
 
-class DayFour: Day {
+class Day04: Day {
 
     override val title: String = "Day 4: Ceres Search"
 
     override operator fun invoke() {
 
         val grid = mutableListOf<List<Char>>()
-        Utils.getFileReader("DayFour.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day04.txt")?.forEachLine { line ->
             grid.add(line.toList())
         }
 

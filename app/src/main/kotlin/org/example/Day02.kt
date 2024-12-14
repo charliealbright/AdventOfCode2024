@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.abs
 
-class DayTwo: Day {
+class Day02: Day {
 
     override val title = "Day 2: Red-nosed Reports"
 
@@ -10,7 +10,7 @@ class DayTwo: Day {
 
         var goodReportCount = 0
         var goodReportCountWithDampener = 0
-        Utils.getFileReader("DayTwo.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day02.txt")?.forEachLine { line ->
             val report = line.split(' ').map { level -> level.toInt() }
 
             if (reportCheck(report)) {

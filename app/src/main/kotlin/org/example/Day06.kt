@@ -1,7 +1,7 @@
 package org.example
 
 
-class DaySix : Day {
+class Day06 : Day {
     override val title = "Day 6: Guard Gallivant"
 
     override fun invoke() {
@@ -11,7 +11,7 @@ class DaySix : Day {
         val loopCausingPoints = mutableListOf<Point>()
         val guard = Guard()
 
-        Utils.getFileReader("DaySix.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day06.txt")?.forEachLine { line ->
             val gridline = line.toMutableList()
             grid.add(gridline)
             gridPart2.add(gridline)

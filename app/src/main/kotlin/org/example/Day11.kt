@@ -3,12 +3,12 @@ package org.example
 import org.example.Utils.digits
 import org.example.Utils.split
 
-class DayEleven : Day {
+class Day11 : Day {
     override val title = "Day 11: Plutonian Pebbles"
 
     override fun invoke() {
         var stones: MutableMap<Long, Long> = mutableMapOf()
-        Utils.readFile("DayEleven.txt")?.split(' ')?.map { it.toLong() }?.forEach {
+        Utils.readFile("Day11.txt")?.split(' ')?.map { it.toLong() }?.forEach {
             stones[it] = 1
         }
 

@@ -2,14 +2,14 @@ package org.example
 
 import java.util.regex.Pattern
 
-class DaySeven : Day {
+class Day07 : Day {
     override val title = "Day 7: Bridge Repair"
 
     override fun invoke() {
         var total = 0L
         var totalInclConcat = 0L
 
-        Utils.getFileReader("DaySeven.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day07.txt")?.forEachLine { line ->
             val items = line.split(Pattern.compile(":? ")).toMutableList()
             val sum = items.removeFirst().toLong()
             val inputs = items.map { num -> num.toLong() }

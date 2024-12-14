@@ -2,7 +2,7 @@ package org.example
 
 import kotlin.math.abs
 
-class DayOne: Day {
+class Day01: Day {
 
     override val title = "Day 1: Historian Hysteria"
 
@@ -11,7 +11,7 @@ class DayOne: Day {
         val a: MutableList<Int> = mutableListOf()
         val b: MutableList<Int> = mutableListOf()
 
-        Utils.getFileReader("DayOne.txt")?.forEachLine { line ->
+        Utils.getFileReader("Day01.txt")?.forEachLine { line ->
             val items = line.split("   ")
             a.add(items[0].toInt())
             b.add(items[1].toInt())
