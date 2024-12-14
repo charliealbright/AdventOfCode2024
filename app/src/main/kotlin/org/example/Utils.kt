@@ -30,4 +30,8 @@ object Utils {
     fun Long.split(): Pair<Long, Long> {
         return Pair(toString().substring(0..<digits()/2).toLong(), toString().substring(digits()/2 ..< digits()).toLong())
     }
+
+    fun Point.neighbor(direction: Direction): Point {
+        return Point(this.x + direction.x, this.y + direction.y)
+    }
 }
