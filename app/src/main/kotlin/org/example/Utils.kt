@@ -1,8 +1,11 @@
 package org.example
 
 import java.io.BufferedReader
+import java.io.ByteArrayOutputStream
+import java.util.zip.GZIPOutputStream
 import kotlin.math.abs
 import kotlin.math.log10
+import kotlin.text.Charsets.UTF_8
 
 object Utils {
 
@@ -33,5 +36,15 @@ object Utils {
 
     fun Point.neighbor(direction: Direction): Point {
         return Point(this.x + direction.x, this.y + direction.y)
+    }
+
+    fun List<Int>.range(): Int {
+        return this.max() - this.min()
+    }
+
+    fun gzip(content: String): ByteArray {
+        val bos = ByteArrayOutputStream()
+        GZIPOutputStream(bos).bufferedWriter(UTF_8).use { it.write(content) }
+        return bos.toByteArray()
     }
 }
